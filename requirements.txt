@@ -1,1 +1,4 @@
 infoblox-client
+netaddr>=0.8.0
+zipp>=3.1.0
+python_version>=3.0
