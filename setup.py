@@ -17,9 +17,6 @@ keywords = [
 with open('README.rst') as f:
     long_description = f.read()
 
-with open('requirements.txt') as f:
-    install_requires = f.read().splitlines()
-
 platforms = 'OS Independent'
 
 classifiers = [
@@ -52,7 +49,12 @@ def main():
         scripts=['scripts/infoblox-callback.py'],
         url='https://github.com/goran-kuzmanovic/patroni-infoblox-integration',
         version='1.0.0',
-        install_requires=install_requires,
+        install_requires=[
+            'infoblox-client',
+            'netaddr>="0.8.0"',
+            'zipp>="3.1.0"',
+            'python_version>="3.0"',
+        ]
     )
 
     setup(**setup_options)
